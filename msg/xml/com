@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<mavlink>
+        <!--<include>common.xml</include>-->
+        <!-- NOTE: If the included file already contains a version tag, remove the version tag here, else uncomment to enable. -->
+	<!--<version>3</version>-->
+	<enums>
+	</enums>
+
+	<messages>
+		<message id="255" name="PACKET">
+			<description></description>
+			<field type="uint8_t"  name="resp">0:No Resp, 1:Resp</field>
+			<field type="uint32_t" name="addr"></field>
+			<field type="uint8_t"  name="length"></field>
+			<field type="uint32_t"  name="total_length"></field>
+			<field type="uint32_t"  name="reply_status"></field>
+			<field type="uint8_t"  name="is_last_packet"></field>
+			<field type="uint8_t[200]" name="data"></field>
+		</message>
+	</messages>
+
+	<messages>
+		<message id="254" name="ACK">
+			<description></description>
+			<field type="uint8_t"    name="msg_id"></field>
+			<field type="uint32_t"   name="err_code"></field>
+			<field type="uint32_t"    name="length_received"></field>
+			<field type="uint8_t"    name="ack_length"></field>
+			<field type="uint8_t[16]" name="data"></field>
+		</message>
+	</messages>
+
+</mavlink>
